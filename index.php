@@ -1,11 +1,14 @@
-<?php include 'routes.php'; ?>
+<?php
+session_start();
+include 'routes.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>EcoTransit - Terminal Sentral Kuantan Style</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -16,6 +19,12 @@
         <a href="#routes">Routes</a>
         <a href="#about">About</a>
         <a href="#faq">FAQ</a>
+        <?php if (isset($_SESSION['username'])): ?>
+          <span style="color:white; margin-left:20px;">👤 <?= htmlspecialchars($_SESSION['username']) ?></span>
+          <a href="logout.php" style="margin-left:10px;">Logout</a>
+        <?php else: ?>
+          <a href="login.php">Login</a>
+        <?php endif; ?>
       </nav>
     </div>
   </header>
@@ -51,9 +60,7 @@
             <option value="Kuala Lumpur">Kuala Lumpur</option>
           </select>
 
-          <input type="date" name="travel_date" required min="<?= date('Y-m-d') ?>">
-
-
+          <input type="date" name="travel_date" required>
 
           <select name="payment_type" required>
             <option value="">Payment Method</option>
