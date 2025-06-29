@@ -21,7 +21,7 @@
   </header>
 
   <section class="hero">
-    <img src="terminal.jpg" alt="Terminal Sentral Kuantan" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Arrival_platforms_of_Terminal_Bersepadu_Selatan.jpg" alt="Terminal Sentral Kuantan" />
     <div class="hero-text">
       <h2>Book Your Bus Journey Online</h2>
       <p>Comfortable, affordable and sustainable travel.</p>
@@ -98,10 +98,7 @@
         <h3>Can I cancel my ticket?</h3>
         <p>Yes, up to 24 hours before departure.</p>
       </div>
-      <div class="faq-item">
-        <h3>Are there discounts for children?</h3>
-        <p>Yes, children under 12 receive discounted rates.</p>
-      </div>
+     
     </section>
   </main>
 
